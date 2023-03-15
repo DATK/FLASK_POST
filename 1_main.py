@@ -8,7 +8,7 @@ def hello_world():
     print(request.json)
     a = request.json['a']
     b = request.json['b']
-    return str(a + b)
+    return {"sum": (a+b)}
 
 
-app.run()
+app.run(debug=True)

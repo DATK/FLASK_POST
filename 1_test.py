@@ -1,9 +1,9 @@
 import requests
 
-host = 'http://127.0.0.1:5000/'
+host = 'http://127.0.0.1:5000/sum/'
 r = requests.post(host,
                   json={'a': 4, 'b': 9})
-
+print(r.json())
 assert r.json() == {'sum': 13}
 
 r = requests.post(host,
